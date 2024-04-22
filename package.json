@@ -1,0 +1,19 @@
+{
+  "name": "leasing-site",
+  "version": "1.0.0",
+  "description": "Auto lizing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zel0g0n/auto-leasing.git"
+  },
+  "author": "alisher oromov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zel0g0n/auto-leasing/issues"
+  },
+  "homepage": "https://github.com/zel0g0n/auto-leasing#readme"
+}
