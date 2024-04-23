@@ -1,0 +1,122 @@
+@media only screen and (max-width: 699px) {
+  header {
+    .header__item {
+      padding: 10px;
+      nav {
+        transition: .5s;
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background-color: $body-color;
+        backdrop-filter: .5;
+        padding: 20px 7%;
+        .navigation {
+          width: 100%;
+          flex-direction: column;
+          gap: 30px;
+          .navigation__item {
+            transition: .3s;
+            &::after {
+              display: none;
+              content: '';
+            }
+            
+            .navigation__item-link {
+              color: $main-text-color;
+              font-size: 20px;
+              font-weight: 600;
+            }
+          }
+          .navigation__item.active {
+            display: none;
+            &::after {
+              background-color: $second-text-color;
+            }
+          }
+        }
+      }
+      .modal-media-nav {
+        left: 0;
+      }
+      
+      .btn__group {
+        flex-direction: column;
+        transition: .5s;
+        position: absolute;
+        z-index: 9999;
+        top: 120%;
+        right: 100%;
+        width: 120px;
+        height: 80px;
+        button {
+          width: 120px;
+          height: 30px;
+        }
+        
+      }
+      .modal-media-btn {
+        right: 7%;      
+      }
+      .menu__navbar-btn {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1240px) and (min-width: 700px) {
+
+  header {
+    .header__item {
+      padding: 10px;
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background-color: $body-color;
+        backdrop-filter: .5;
+        .navigation {
+          width: 300px;
+          height: 200px;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          .navigation__item {
+            transition: .3s;
+            &::after {
+              display: none;
+              content: '';
+            }
+            
+            .navigation__item-link {
+              color: $main-text-color;
+              font-size: 20px;
+              font-weight: 600;
+            }
+          }
+          .navigation__item.active {
+            display: none;
+            &::after {
+              background-color: $second-text-color;
+            }
+          }
+        }
+      }
+      .modal-media-nav {
+        left: 0;
+      }
+      
+      .menu__navbar-btn {
+        display: block;
+      }
+    }
+  }
+}
