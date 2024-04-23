@@ -1,7 +1,7 @@
 {
   "name": "leasing-site",
   "version": "1.0.0",
-  "description": "Auto lizing",
+  "description": "Auto leasing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/zel0g0n/auto-leasing/issues"
   },
-  "homepage": "https://github.com/zel0g0n/auto-leasing#readme"
+  "homepage": "https://github.com/zel0g0n/auto-leasing#readme",
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.23",
+    "sass": "^1.75.0"
+  }
 }
