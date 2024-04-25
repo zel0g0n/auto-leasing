@@ -306,6 +306,15 @@ header .header__item .menu__navbar-btn {
   main .advantage .advantage__block .advantage__block-item .advantage__block-img {
     width: 240px;
   }
+  main .brands .brands__title {
+    width: 90%;
+  }
+  main .brands .brands__list {
+    justify-content: center;
+    grid-template-columns: repeat(1, 300px);
+    grid-template-rows: repeat(9, 300px);
+    gap: 30px;
+  }
 }
 @media only screen and (max-width: 1240px) and (min-width: 768px) {
   header .header__item {
@@ -371,7 +380,7 @@ header .header__item .menu__navbar-btn {
     height: max-content;
   }
   main .conditions .conditions__title {
-    width: 90%;
+    width: 100%;
   }
   main .conditions .conditions__list {
     width: 90%;
@@ -381,7 +390,7 @@ header .header__item .menu__navbar-btn {
     gap: 50px 80px;
   }
   main .transports .transports__title {
-    width: 90%;
+    width: 100%;
   }
   main .transports .transports__list {
     max-width: 800px;
@@ -392,13 +401,26 @@ header .header__item .menu__navbar-btn {
   main .transports .transports__list .transports__list-item .transports__list-img {
     width: 350px;
   }
+  main .advantage .advantage__item {
+    width: 100%;
+  }
+  main .advantage .advantage__block {
+    width: 300%;
+  }
   main .advantage .advantage__block .advantage__block-item {
-    justify-content: start;
-    align-items: start;
-    width: 700px;
+    width: 32%;
   }
   main .advantage .advantage__block .advantage__block-item .advantage__block-img {
-    width: 100px;
+    width: 30%;
+  }
+  main .brands .brands__title {
+    width: 100%;
+  }
+  main .brands .brands__list {
+    justify-content: center;
+    grid-template-columns: repeat(3, 230px);
+    grid-template-rows: repeat(3, 230px);
+    gap: 30px;
   }
 }
 .conditions {
@@ -497,7 +519,7 @@ header .header__item .menu__navbar-btn {
 .transports .transports__list {
   display: grid;
   grid-template-columns: repeat(3, 380px);
-  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: repeat(3, max-content);
   justify-content: space-between;
   gap: 30px;
   width: 100%;
@@ -646,6 +668,47 @@ header .header__item .menu__navbar-btn {
 }
 .advantage .advantage__block .block3 {
   background-color: rgb(121, 143, 164);
+}
+
+.brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1240px;
+  margin: 100px auto;
+}
+.brands .brands__title {
+  flex-shrink: 1;
+  width: 100%;
+  font-size: 2em;
+  font-weight: 600;
+  color: rgb(17, 33, 49);
+  line-height: 80px;
+  margin-bottom: 100px;
+  padding: 0 10px;
+}
+.brands .brands__title::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 5px;
+  background-color: rgb(120, 49, 38);
+}
+.brands .brands__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 230px);
+  grid-template-rows: repeat(2, 230px);
+  justify-content: space-between;
+  gap: 30px;
+}
+.brands .brands__list .brands__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0px 10px 32px -4px rgba(24, 39, 75, 0.1);
 }
 
 body .container {
