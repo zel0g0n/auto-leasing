@@ -1,4 +1,14 @@
-@import 'common';
 @import 'variable';
+@import 'common';
 @import './section/header.scss';
+@import './section/proffer.scss';
 @import 'media.scss';
+@import './section/conditions.scss';
+
+.container {
+  width: 100%;
+  background-color: $body-color;
+  main {
+    width: 100%;
+  }
+}

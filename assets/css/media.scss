@@ -5,18 +5,20 @@
       nav {
         transition: .5s;
         position: absolute;
-        top: 100%;
+        top: 110%;
         left: -100%;
         width: 100%;
         height: calc(100vh - 100px);
-        background-color: $body-color;
-        backdrop-filter: .5;
-        padding: 20px 7%;
+        background-color: rgba(255,255,245,.8);
+        backdrop-filter: blur(5px);
+        padding: 60px 7%;
         .navigation {
           width: 100%;
           flex-direction: column;
+          align-items: center;
           gap: 30px;
           .navigation__item {
+            display: block;
             transition: .3s;
             &::after {
               display: none;
@@ -30,7 +32,6 @@
             }
           }
           .navigation__item.active {
-            display: none;
             &::after {
               background-color: $second-text-color;
             }
@@ -46,8 +47,8 @@
         transition: .5s;
         position: absolute;
         z-index: 9999;
-        top: 120%;
-        right: 100%;
+        top: 380%;
+        left: -100%;
         width: 120px;
         height: 80px;
         button {
@@ -57,10 +58,47 @@
         
       }
       .modal-media-btn {
-        right: 7%;      
+        left: calc(50% - 60px);      
       }
       .menu__navbar-btn {
         display: block;
+      }
+    }
+  }
+
+  main {
+    padding: 10px;
+
+    .proffer {
+      padding: inherit;
+      .proffer__section {
+        padding: inherit;
+        background-color: rgba(240,240,240,.6);
+        width: 690px;
+        border-radius: 20px;
+        .proffer__title {
+          font-size: 38px;
+          line-height: 48px;
+        }
+        .proffer__section-heading {
+          width: 360px;
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
+    }
+    .conditions {
+      height: max-content;
+      .conditions__title {
+        width: 90%;
+        font-size: 2em;
+      }
+      .conditions__list {
+        width: 90%;
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(4, 300px);
+        justify-content: center;
+        gap: 50px 80px;
       }
     }
   }
@@ -81,8 +119,8 @@
         left: -100%;
         width: 100%;
         height: calc(100vh - 100px);
-        background-color: $body-color;
-        backdrop-filter: .5;
+        background-color: rgba(255,255,245,.8);
+        backdrop-filter: blur(5px);
         .navigation {
           width: 300px;
           height: 200px;
@@ -103,7 +141,6 @@
             }
           }
           .navigation__item.active {
-            display: none;
             &::after {
               background-color: $second-text-color;
             }
@@ -116,6 +153,35 @@
       
       .menu__navbar-btn {
         display: block;
+      }
+    }
+  }
+  main {
+    padding: 10px;
+
+    .proffer {
+      padding: inherit;
+      .proffer__section {
+        padding: inherit;
+        background-color: rgba(240,240,240,.6);
+        width: 690px;
+        border-radius: 20px;
+        .proffer__title {
+          font-size: 58px;
+        }
+      }
+    }
+    .conditions {
+      height: max-content;
+      .conditions__title {
+        width: 90%;
+      }
+      .conditions__list {
+        width: 90%;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(2, 300px);
+        justify-content: center;
+        gap: 50px 80px;
       }
     }
   }
