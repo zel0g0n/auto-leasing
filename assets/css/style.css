@@ -164,14 +164,15 @@ header .header__item .menu__navbar-btn {
   font-size: 18px;
 }
 
-@media only screen and (max-width: 699px) {
+@media only screen and (max-width: 767px) {
   header .header__item {
-    padding: 10px;
+    height: 100px;
+    padding: 0 10px;
   }
   header .header__item nav {
     transition: 0.5s;
     position: absolute;
-    top: 110%;
+    top: 100%;
     left: -100%;
     width: 100%;
     height: calc(100vh - 100px);
@@ -233,17 +234,18 @@ header .header__item .menu__navbar-btn {
   main .proffer .proffer__section {
     padding: inherit;
     background-color: rgba(240, 240, 240, 0.6);
-    width: 690px;
+    width: 100%;
     border-radius: 20px;
+    height: max-content;
   }
   main .proffer .proffer__section .proffer__title {
     font-size: 38px;
-    line-height: 48px;
+    line-height: 42px;
   }
   main .proffer .proffer__section .proffer__section-heading {
-    width: 360px;
+    width: 340px;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 28px;
   }
   main .conditions {
     height: max-content;
@@ -251,6 +253,7 @@ header .header__item .menu__navbar-btn {
   main .conditions .conditions__title {
     width: 90%;
     font-size: 2em;
+    line-height: 42px;
   }
   main .conditions .conditions__list {
     width: 90%;
@@ -259,8 +262,52 @@ header .header__item .menu__navbar-btn {
     justify-content: center;
     gap: 50px 80px;
   }
+  main .transports .transports__title {
+    width: 90%;
+    line-height: 42px;
+  }
+  main .transports .transports__list {
+    justify-content: center;
+    max-width: 600px;
+    grid-template-columns: repeat(1, 360px);
+    gap: 30px 0px;
+    grid-template-rows: repeat(7, max-content);
+  }
+  main .transports .transports__list .transports__list-item .transports__list-img {
+    width: 340px;
+  }
+  main .advantage {
+    width: 90%;
+  }
+  main .advantage .advantage__item {
+    align-items: start;
+    flex-direction: column;
+    height: 160px;
+  }
+  main .advantage .advantage__item .advantage__item-title {
+    line-height: 42px;
+  }
+  main .advantage .advantage__block {
+    width: 300%;
+  }
+  main .advantage .advantage__block .advantage__block-item {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 33.3%;
+    height: max-content;
+  }
+  main .advantage .advantage__block .advantage__block-item .advantage__block-data {
+    width: 100%;
+  }
+  main .advantage .advantage__block .advantage__block-item .advantage__block-data .advantage__block-descr {
+    width: 100%;
+  }
+  main .advantage .advantage__block .advantage__block-item .advantage__block-img {
+    width: 240px;
+  }
 }
-@media only screen and (max-width: 1240px) and (min-width: 700px) {
+@media only screen and (max-width: 1240px) and (min-width: 768px) {
   header .header__item {
     padding: 10px;
   }
@@ -333,6 +380,26 @@ header .header__item .menu__navbar-btn {
     justify-content: center;
     gap: 50px 80px;
   }
+  main .transports .transports__title {
+    width: 90%;
+  }
+  main .transports .transports__list {
+    max-width: 800px;
+    grid-template-columns: repeat(2, 370px);
+    gap: 30px 0px;
+    grid-template-rows: repeat(5, max-content);
+  }
+  main .transports .transports__list .transports__list-item .transports__list-img {
+    width: 350px;
+  }
+  main .advantage .advantage__block .advantage__block-item {
+    justify-content: start;
+    align-items: start;
+    width: 700px;
+  }
+  main .advantage .advantage__block .advantage__block-item .advantage__block-img {
+    width: 100px;
+  }
 }
 .conditions {
   display: flex;
@@ -403,11 +470,189 @@ header .header__item .menu__navbar-btn {
   bottom: 26px;
 }
 
-.container {
+.transports {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.transports .transports__title {
+  flex-shrink: 1;
+  width: 1240px;
+  font-size: 2em;
+  font-weight: 600;
+  color: rgb(17, 33, 49);
+  line-height: 80px;
+  margin-bottom: 100px;
+  padding: 0 10px;
+}
+.transports .transports__title::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 5px;
+  background-color: rgb(120, 49, 38);
+}
+.transports .transports__list {
+  display: grid;
+  grid-template-columns: repeat(3, 380px);
+  grid-template-columns: repeat(3, max-content);
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+.transports .transports__list .transports__list-item {
+  padding: 10px;
+  border: 0.5px solid rgba(23, 31, 44, 0.1);
+  border-radius: 15px;
+}
+.transports .transports__list .transports__list-item .transports__list-img {
+  width: 360px;
+  height: 340px;
+  margin-bottom: 10px;
+}
+.transports .transports__list .transports__list-item .transports__list-heading {
+  font-size: 26px;
+  font-weight: 700;
+  color: rgb(17, 33, 49);
+  margin-bottom: 9px;
+}
+.transports .transports__list .transports__list-item .transports__list-descr {
+  width: 260px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  color: rgb(121, 143, 164);
+  margin-bottom: 15px;
+}
+.transports .transports__list .transports__list-item .transports__list-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 33px;
+  border: 0.5px solid rgba(23, 31, 44, 0.1);
+  border-radius: 5px;
+  color: rgb(17, 33, 49);
+  transition: 0.4s;
+}
+.transports .transports__list .transports__list-item .transports__list-all i {
+  transition: inherit;
+  color: rgb(73, 125, 251);
+}
+.transports .transports__list .transports__list-item .transports__list-all:hover {
+  border-color: rgb(73, 125, 251);
+}
+.transports .transports__list .transports__list-item .transports__list-all:hover i {
+  transform: rotate(-30deg);
+}
+
+.advantage {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px;
+  margin: 100px auto;
+  overflow: hidden;
+}
+.advantage .advantage__item {
+  flex-shrink: 1;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  padding: 0 10px;
+}
+.advantage .advantage__item .advantage__item-title {
+  font-size: 2em;
+  font-weight: 600;
+  color: rgb(17, 33, 49);
+  line-height: 80px;
+}
+.advantage .advantage__item .advantage__item-title::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 5px;
+  background-color: rgb(120, 49, 38);
+}
+.advantage .advantage__item .advantage__slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 215px;
+}
+.advantage .advantage__item .advantage__slider .advantage__slider-w span {
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  color: rgb(121, 143, 164);
+  font-size: 24px;
+}
+.advantage .advantage__item .advantage__slider .advantage__slider-w .active-order {
+  color: rgb(17, 33, 49);
+}
+.advantage .advantage__item .advantage__slider button {
+  border: 0;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: rgb(17, 33, 49);
+}
+.advantage .advantage__block {
+  flex-shrink: 1;
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  transition: 0.4s;
+}
+.advantage .advantage__block .advantage__block-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1200px;
+  height: 525px;
+  background-color: rgb(244, 246, 252);
+  border-radius: 25px;
+  padding: 30px;
+}
+.advantage .advantage__block .advantage__block-item .advantage__block-data {
+  width: 640px;
+}
+.advantage .advantage__block .advantage__block-item .advantage__block-data .advantage__block-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 62.4px;
+  margin-bottom: 20px;
+}
+.advantage .advantage__block .advantage__block-item .advantage__block-data .advantage__block-info {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28.6px;
+  color: rgb(23, 31, 44);
+  margin-bottom: 26px;
+}
+.advantage .advantage__block .advantage__block-item .advantage__block-data .advantage__block-descr {
+  width: 500px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  color: rgba(23, 31, 44, 0.75);
+}
+.advantage .advantage__block .block2 {
+  background-color: rgba(238, 51, 238, 0.2);
+}
+.advantage .advantage__block .block3 {
+  background-color: rgb(121, 143, 164);
+}
+
+body .container {
   width: 100%;
   background-color: #fff;
 }
-.container main {
+body .container main {
   width: 100%;
 }
 

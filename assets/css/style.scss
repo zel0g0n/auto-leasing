@@ -4,11 +4,16 @@
 @import './section/proffer.scss';
 @import 'media.scss';
 @import './section/conditions.scss';
+@import './section/transports.scss';
+@import './section/advantage.scss';
 
-.container {
-  width: 100%;
-  background-color: $body-color;
-  main {
+body {
+  .container {
     width: 100%;
+    background-color: $body-color;
+
+    main {
+      width: 100%;
+    }
   }
 }

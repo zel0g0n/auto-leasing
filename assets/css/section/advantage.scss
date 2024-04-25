@@ -1,0 +1,106 @@
+.advantage {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px;
+  margin: 100px auto;
+  overflow: hidden;
+  .advantage__item {
+    flex-shrink: 1;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding: 0 10px;
+
+    .advantage__item-title {
+      font-size: 2em;
+      font-weight: 600;
+      color: $main-text-color;
+      line-height: 80px;
+      &::after {
+        content: '';
+        display: block;
+        width: 300px;
+        height: 5px;
+        background-color: $second-text-color;
+      }
+    }
+    .advantage__slider {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 215px;
+      
+      .advantage__slider-w {
+        span {
+          display: inline-block;
+          text-align: center;
+          width: 30px;
+          color: $non-active-text-color;
+          font-size: 24px;
+        }
+        .active-order {
+          color: $main-text-color;
+        }
+        
+      }
+      button {
+        border: 0;
+        background-color: transparent;
+        font-size: 24px;
+        cursor: pointer;
+        color: $main-text-color;
+      }
+
+    }
+  }
+  .advantage__block {
+    flex-shrink: 1;
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    transition: .4s;
+    .advantage__block-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 1200px;
+      height: 525px;
+      background-color: rgba(244, 246, 252, 1);
+      border-radius: 25px;
+      padding: 30px;
+      .advantage__block-data {
+        width: 640px;
+        .advantage__block-title {
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 62.4px;
+          margin-bottom: 20px;
+
+        }
+        .advantage__block-info {
+          font-size: 22px;
+          font-weight: 500;
+          line-height: 28.6px;
+          color: $button-color;
+          margin-bottom: 26px;
+        }
+        .advantage__block-descr {
+          width: 500px;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 23.4px;
+          color: $blur-text-color;
+        }
+      }
+    }
+    .block2 {
+      background-color: #e3e3;
+    }
+    .block3 {
+      background-color: $non-active-text-color;
+    }
+  }
+}
