@@ -24,7 +24,7 @@
   .transports__list {
     display: grid;
     grid-template-columns: repeat(3, 380px);
-    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: repeat(3, max-content);
     justify-content: space-between;
     gap: 30px;
 
