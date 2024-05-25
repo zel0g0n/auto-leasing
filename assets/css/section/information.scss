@@ -1,5 +1,113 @@
 .information {
-  width: 100%;
-  height: 300px;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1240px;
+  margin: 100px auto;
+  background-color: transparent;
+  .information__title {
+    width: 980px;
+    font-size: 78px;
+    font-weight: 600;
+    line-height: 74.1px;
+    text-align: center;
+    color: $main-text-color;
+    margin-bottom: 60px;
+    .information__title-span {
+      color: $non-active-text-color;
+    }
+  }
+  .information__more {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 660px;
+    background-color: red;
+    background-image: url('../images/transport1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    .information__more-play {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .information__more-text {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      width: 60%;
+      height: 65px;
+      border-radius: 8px;
+      background-color: $body-color;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 35px;
+      color: $main-text-color;
+      padding: 15px;
+      cursor: default;
+    }
+  }
+  .information__helping {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 100px;
+    .information__helping-explanation {
+      width: 530px;
+      .information__explanation-title {
+        font-size: 52px;
+        font-weight: 600;
+        line-height: 52px;
+        color: $main-text-color;
+        margin-bottom: 60px;
+        .information__explanation-span {
+          color: $second-text-color;
+        }
+      }
+      .information__explanation-descr {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $first-text-color
+      }
+    }
+    .information__helping-section {
+      width: 580px;
+      .information__helping-item {
+        width: 100%;
+        height: 350px;
+        border-radius: 14px;
+        background-color: $header-footer-bgc;
+        margin-bottom: 40px;
+        padding: 40px;
+        p {
+          width: 70%;
+          color: $body-color;
+        }
+        .helping__item-num {
+          font-size: 50px;
+          font-weight: 600;
+          margin-bottom: 120px;
+        }
+        .helping__item-title {
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        .helping__item-descr {
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 16px;
+        }
+      }
+    }
+  }
 }
